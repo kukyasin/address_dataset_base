@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="address_dataset_base.FloatFieldPlaceholder" t-inherit="web.FloatField" t-inherit-mode="extension">
+        <xpath expr="//input" position="attributes">
+            <attribute name="t-att-placeholder">props.placeholder</attribute>
+        </xpath>
+    </t>
+</templates>

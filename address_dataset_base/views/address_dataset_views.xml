@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_address_dataset_location_list" model="ir.ui.view">
+        <field name="name">address.dataset.location.list</field>
+        <field name="model">address.dataset.location</field>
+        <field name="arch" type="xml">
+            <list string="Address Dataset" create="1" edit="1" delete="1">
+                <field name="zip"/>
+                <field name="neighborhood"/>
+                <field name="city_id"/>
+                <field name="state_id"/>
+                <field name="country_id"/>
+                <field name="lat" column_invisible="context.get('address_dataset_hide_coordinates')"/>
+                <field name="long" column_invisible="context.get('address_dataset_hide_coordinates')"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_address_dataset_location_form" model="ir.ui.view">
+        <field name="name">address.dataset.location.form</field>
+        <field name="model">address.dataset.location</field>
+        <field name="arch" type="xml">
+            <form string="Address Dataset Entry">
+                <sheet>
+                    <group>
+                        <field name="hide_coordinates" invisible="1"/>
+                        <group>
+                            <field name="zip"/>
+                            <field name="country_id"/>
+                            <field name="state_id"/>
+                            <field name="city_id"/>
+                            <field name="neighborhood"/>
+                        </group>
+                        <group>
+                            <field name="lat" invisible="hide_coordinates"/>
+                            <field name="long" invisible="hide_coordinates"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_address_dataset_location_search" model="ir.ui.view">
+        <field name="name">address.dataset.location.search</field>
+        <field name="model">address.dataset.location</field>
+        <field name="arch" type="xml">
+            <search string="Address Dataset">
+                <field name="zip"/>
+                <field name="neighborhood"/>
+                <field name="city_id"/>
+                <field name="state_id"/>
+                <field name="country_id"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_address_dataset_locations" model="ir.actions.act_window">
+        <field name="name">Address Dataset</field>
+        <field name="res_model">address.dataset.location</field>
+        <field name="view_mode">list,form</field>
+        <field name="view_id" ref="view_address_dataset_location_list"/>
+        <field name="search_view_id" ref="view_address_dataset_location_search"/>
+    </record>
+
+    <record id="action_address_dataset_locations_server" model="ir.actions.server">
+        <field name="name">Address Dataset</field>
+        <field name="model_id" ref="model_address_dataset_location"/>
+        <field name="state">code</field>
+        <field name="code">action = model.action_open_locations()</field>
+    </record>
+
+    <record id="action_address_dataset_settings_server" model="ir.actions.server">
+        <field name="name">Configuration</field>
+        <field name="model_id" ref="model_address_dataset_settings"/>
+        <field name="state">code</field>
+        <field name="code">action = model.action_open_settings()</field>
+    </record>
+
+    <menuitem id="menu_address_dataset_root" name="Address Dataset" sequence="80" groups="base.group_user"/>
+
+    <menuitem
+        id="menu_address_dataset_locations"
+        name="Locations"
+        parent="menu_address_dataset_root"
+        action="action_address_dataset_locations_server"
+        sequence="10"
+        groups="base.group_user"
+    />
+
+    <menuitem
+        id="menu_address_dataset_configuration"
+        name="Configuration"
+        parent="menu_address_dataset_root"
+        action="action_address_dataset_settings_server"
+        sequence="90"
+        groups="base.group_user"
+    />
+</odoo>
