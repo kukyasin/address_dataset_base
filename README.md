@@ -5,7 +5,7 @@
 ### Core Address Dataset Engine for Odoo 11.0 to 19.0 (Suite Foundation)
 
 [![Odoo Version](https://img.shields.io/badge/Odoo-11.0%2C12.0%2C13.0%2C14.0%2C15.0%2C16.0%2C17.0%2C18.0%2C19.0-blue.svg)](https://www.odoo.com)
-[![License](https://img.shields.io/badge/License-OPL--1-red.svg)](LICENSE)
+[![License](https://img.shields.io/badge/License-LGPL--3-red.svg)](LICENSE)
 [![Module Type](https://img.shields.io/badge/Type-Core%20Module-green.svg)](#)
 [![Support](https://img.shields.io/badge/Support-support%40algoritmetic.com-0d6e8a.svg)](mailto:support@algoritmetic.com)
 [![Website](https://img.shields.io/badge/Website-algoritmetic.com-1f8a70.svg)](https://www.algoritmetic.com)
@@ -196,4 +196,4 @@ For installation, customization, migration, and integrations:
 
 ## License
 
-This module is licensed under **OPL-1**.
+This module is licensed under **LGPL-3**.

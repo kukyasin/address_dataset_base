@@ -17,7 +17,7 @@ Includes:
     """,
     "author": "ALGORITMETIC LTD",
     "website": "https://www.algoritmetic.com",
-    "license": "OPL-1",
+    "license": "LGPL-3",
     "price": 0.0,
     "currency": "EUR",
     "support": "support@algoritmetic.com",
