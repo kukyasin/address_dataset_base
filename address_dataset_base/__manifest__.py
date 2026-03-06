@@ -1,6 +1,6 @@
 {
     "name": "Address Dataset Base",
-    "version": "16.0.1.0.0",
+    "version": "15.0.1.0.0",
     "category": "Localization",
     "summary": "Core address dataset engine with hierarchy, partner integration and coordinate visibility controls",
     "description": """
@@ -24,7 +24,7 @@ Includes:
     "images": [
         "static/description/main_screen.png",
     ],
-    "depends": ["base_address_extended"],
+    "depends": ["base_address_extended", "base_address_city"],
     "data": [
         "security/address_dataset_base_security.xml",
         "views/address_dataset_settings_views.xml",

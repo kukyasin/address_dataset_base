@@ -3,7 +3,7 @@
     <record id="view_partner_form_address_dataset_dependency" model="ir.ui.view">
         <field name="name">res.partner.form.address.dataset.dependency</field>
         <field name="model">res.partner</field>
-        <field name="inherit_id" ref="base_address_extended.address_street_extended_city_form"/>
+        <field name="inherit_id" ref="base.view_partner_form"/>
         <field name="arch" type="xml">
             <xpath expr="//field[@name='state_id']" position="attributes">
                 <attribute name="string">Province</attribute>
@@ -12,11 +12,15 @@
             <xpath expr="//field[@name='city']" position="attributes">
                 <attribute name="invisible">1</attribute>
             </xpath>
-            <xpath expr="//field[@name='city_id']" position="attributes">
-                <attribute name="string">District</attribute>
-                <attribute name="placeholder">District</attribute>
-                <attribute name="domain">[('country_id', '=', country_id), ('state_id', '=', state_id)]</attribute>
-                <attribute name="invisible">0</attribute>
+            <xpath expr="//field[@name='city']" position="after">
+                <field
+                    name="city_id"
+                    string="District"
+                    placeholder="District"
+                    class="o_address_city"
+                    domain="[('country_id', '=', country_id), ('state_id', '=', state_id)]"
+                    options="{'no_open': True, 'no_create': True}"
+                />
             </xpath>
             <xpath expr="//field[@name='state_id']" position="after">
                 <field
@@ -34,41 +38,6 @@
                 <field name="hide_coordinates" invisible="1"/>
                 <field name="partner_latitude" string="Lat" placeholder="Lat" attrs="{'invisible': [('hide_coordinates', '=', True)]}"/>
                 <field name="partner_longitude" string="Long" placeholder="Long" attrs="{'invisible': [('hide_coordinates', '=', True)]}"/>
-            </xpath>
-        </field>
-    </record>
-
-    <record id="view_partner_form_address_dataset_force_labels" model="ir.ui.view">
-        <field name="name">res.partner.form.address.dataset.force.labels</field>
-        <field name="model">res.partner</field>
-        <field name="inherit_id" ref="base.view_partner_form"/>
-        <field name="priority">999</field>
-        <field name="arch" type="xml">
-            <xpath expr="//div[hasclass('o_address_format')]/field[@name='state_id']" position="attributes">
-                <attribute name="string">Province</attribute>
-                <attribute name="placeholder">Province</attribute>
-            </xpath>
-            <xpath expr="//div[hasclass('o_address_format')]/field[@name='city_id']" position="attributes">
-                <attribute name="string">District</attribute>
-                <attribute name="placeholder">District</attribute>
-                <attribute name="invisible">0</attribute>
-                <attribute name="domain">[('country_id', '=', country_id), ('state_id', '=', state_id)]</attribute>
-            </xpath>
-            <xpath expr="//div[hasclass('o_address_format')]/field[@name='city']" position="attributes">
-                <attribute name="invisible">1</attribute>
-            </xpath>
-            <xpath expr="//field[@name='child_ids']//form//div[hasclass('o_address_format')]/field[@name='state_id']" position="attributes">
-                <attribute name="string">Province</attribute>
-                <attribute name="placeholder">Province</attribute>
-            </xpath>
-            <xpath expr="//field[@name='child_ids']//form//div[hasclass('o_address_format')]/field[@name='city_id']" position="attributes">
-                <attribute name="string">District</attribute>
-                <attribute name="placeholder">District</attribute>
-                <attribute name="invisible">0</attribute>
-                <attribute name="domain">[('country_id', '=', country_id), ('state_id', '=', state_id)]</attribute>
-            </xpath>
-            <xpath expr="//field[@name='child_ids']//form//div[hasclass('o_address_format')]/field[@name='city']" position="attributes">
-                <attribute name="invisible">1</attribute>
             </xpath>
         </field>
     </record>
