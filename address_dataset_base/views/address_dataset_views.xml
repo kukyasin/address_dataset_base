@@ -10,8 +10,8 @@
                 <field name="city_id"/>
                 <field name="state_id"/>
                 <field name="country_id"/>
-                <field name="lat" column_invisible="context.get('address_dataset_hide_coordinates')"/>
-                <field name="long" column_invisible="context.get('address_dataset_hide_coordinates')"/>
+                <field name="lat"/>
+                <field name="long"/>
             </tree>
         </field>
     </record>
@@ -32,8 +32,8 @@
                             <field name="neighborhood"/>
                         </group>
                         <group>
-                            <field name="lat" invisible="hide_coordinates"/>
-                            <field name="long" invisible="hide_coordinates"/>
+                            <field name="lat" attrs="{'invisible': [('hide_coordinates', '=', True)]}"/>
+                            <field name="long" attrs="{'invisible': [('hide_coordinates', '=', True)]}"/>
                         </group>
                     </group>
                 </sheet>

@@ -24,7 +24,7 @@
                     string="Neighborhood"
                     placeholder="Neighborhood"
                     class="o_address_city"
-                    invisible="not city_id"
+                    attrs="{'invisible': [('city_id', '=', False)]}"
                     domain="[('country_id', '=', country_id), ('state_id', '=', state_id), ('city_id', '=', city_id), ('zip', '=?', zip)]"
                     context="{'address_dataset_auto_popup': True}"
                     options="{'no_open': True, 'no_create': True}"
@@ -32,8 +32,8 @@
             </xpath>
             <xpath expr="//field[@name='country_id']" position="after">
                 <field name="hide_coordinates" invisible="1"/>
-                <field name="partner_latitude" string="Lat" placeholder="Lat" invisible="hide_coordinates"/>
-                <field name="partner_longitude" string="Long" placeholder="Long" invisible="hide_coordinates"/>
+                <field name="partner_latitude" string="Lat" placeholder="Lat" attrs="{'invisible': [('hide_coordinates', '=', True)]}"/>
+                <field name="partner_longitude" string="Long" placeholder="Long" attrs="{'invisible': [('hide_coordinates', '=', True)]}"/>
             </xpath>
         </field>
     </record>
