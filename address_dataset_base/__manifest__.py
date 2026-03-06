@@ -1,6 +1,6 @@
 {
     "name": "Address Dataset Base",
-    "version": "13.0.1.0.0",
+    "version": "12.0.1.0.0",
     "category": "Localization",
     "summary": "Core address dataset engine with hierarchy, partner integration and coordinate visibility controls",
     "description": """
