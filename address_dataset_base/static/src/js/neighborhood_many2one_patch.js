@@ -74,6 +74,18 @@ if (!Object.prototype.hasOwnProperty.call(FloatField.props, "placeholder")) {
     };
 }
 
+patch(FloatField.prototype, {
+    get value() {
+        const value = super.value;
+        // For editable fields with placeholder, display zero values as empty
+        // so placeholder text is shown instead of "0.0000000".
+        if (!this.props.readonly && this.props.placeholder && value === 0) {
+            return false;
+        }
+        return value;
+    },
+});
+
 const _baseFloatExtractProps = floatField.extractProps;
 floatField.extractProps = (params) => {
     const props = _baseFloatExtractProps(params);

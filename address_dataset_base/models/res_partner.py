@@ -15,6 +15,20 @@ class ResPartner(models.Model):
     )
     hide_coordinates = fields.Boolean(compute="_compute_hide_coordinates")
 
+    def _get_neighborhood_domain(self):
+        self.ensure_one()
+        if not self.country_id:
+            return [("id", "=", 0)]
+
+        domain = [("country_id", "=", self.country_id.id)]
+        if self.state_id:
+            domain.append(("state_id", "=", self.state_id.id))
+        if self.city_id:
+            domain.append(("city_id", "=", self.city_id.id))
+        if self.zip:
+            domain.append(("zip", "=", self.zip))
+        return domain
+
     @api.model
     def default_get(self, fields_list):
         values = super().default_get(fields_list)
@@ -61,23 +75,18 @@ class ResPartner(models.Model):
                 partner.partner_latitude = False
                 partner.partner_longitude = False
 
+        if len(self) == 1:
+            return {"domain": {"neighborhood_id": self._get_neighborhood_domain()}}
+
     @api.onchange("country_id", "state_id", "city_id", "zip", "neighborhood_id")
     def _onchange_auto_fill_from_scope(self):
         for partner in self:
             if partner.neighborhood_id:
                 continue
 
-            domain = []
-            if partner.country_id:
-                domain.append(("country_id", "=", partner.country_id.id))
-            if partner.state_id:
-                domain.append(("state_id", "=", partner.state_id.id))
-            if partner.city_id:
-                domain.append(("city_id", "=", partner.city_id.id))
-            if partner.zip:
-                domain.append(("zip", "=", partner.zip))
+            domain = partner._get_neighborhood_domain()
 
-            if not domain:
+            if domain == [("id", "=", 0)]:
                 continue
 
             matches = self.env["address.dataset.location"].search(domain, limit=2)

@@ -33,13 +33,10 @@ class AddressDatasetLocation(models.Model):
     name = fields.Char(compute="_compute_name", store=True)
     hide_coordinates = fields.Boolean(compute="_compute_hide_coordinates")
 
-    _sql_constraints = [
-        (
-            "address_dataset_unique_key",
-            "unique(country_id, state_id, city_id, zip, neighborhood)",
-            _("Postal address line must be unique."),
-        )
-    ]
+    _address_dataset_unique_key = models.Constraint(
+        "UNIQUE(country_id, state_id, city_id, zip, neighborhood)",
+        "Postal address line must be unique.",
+    )
 
     @api.depends("zip", "neighborhood", "city_id", "state_id")
     def _compute_name(self):

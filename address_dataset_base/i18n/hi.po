@@ -1,0 +1,228 @@
+# Translation template for address_dataset_base (hi)
+msgid ""
+msgstr ""
+"Project-Id-Version: address_dataset_base 19.0.1.0.0\n"
+"Report-Msgid-Bugs-To: support@algoritmetic.com\n"
+"POT-Creation-Date: 2026-03-05 00:00+0000\n"
+"PO-Revision-Date: 2026-03-05 00:00+0000\n"
+"Last-Translator: ALGORITMETIC LTD <support@algoritmetic.com>\n"
+"Language-Team: ALGORITMETIC LTD <support@algoritmetic.com>\n"
+"Language: hi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. module: address_dataset_base
+#: model_terms:ir.ui.view,arch_db:address_dataset_base.view_address_dataset_settings_form
+msgid "Save"
+msgstr "बचाना"
+
+#. module: address_dataset_base
+#: model_terms:ir.ui.view,arch_db:address_dataset_base.view_address_dataset_settings_form
+msgid "Cancel"
+msgstr "रद्द करना"
+
+#. module: address_dataset_base
+#. odoo-python
+#: code:addons/address_dataset_base/models/settings.py:0
+#: model:ir.actions.server,name:address_dataset_base.action_address_dataset_settings_server
+#: model:ir.ui.menu,name:address_dataset_base.menu_address_dataset_configuration
+msgid "Configuration"
+msgstr "विन्यास"
+
+#. module: address_dataset_base
+#: model:ir.model.fields,field_description:address_dataset_base.field_res_partner__partner_latitude
+#: model:ir.model.fields,field_description:address_dataset_base.field_res_users__partner_latitude
+msgid "Geo Latitude"
+msgstr "भू अक्षांश"
+
+#. module: address_dataset_base
+#: model:ir.model.fields,field_description:address_dataset_base.field_res_partner__partner_longitude
+#: model:ir.model.fields,field_description:address_dataset_base.field_res_users__partner_longitude
+msgid "Geo Longitude"
+msgstr "भू देशांतर"
+
+#. module: address_dataset_base
+#: model:ir.model.fields,field_description:address_dataset_base.field_address_dataset_location__neighborhood
+#: model:ir.model.fields,field_description:address_dataset_base.field_res_partner__neighborhood_id
+#: model:ir.model.fields,field_description:address_dataset_base.field_res_users__neighborhood_id
+#: model_terms:ir.ui.view,arch_db:address_dataset_base.view_partner_form_address_dataset_dependency
+msgid "Neighborhood"
+msgstr "अड़ोस-पड़ोस"
+
+#. module: address_dataset_base
+#: model_terms:ir.ui.view,arch_db:address_dataset_base.view_partner_form_address_dataset_dependency
+msgid "Lat"
+msgstr "अक्षां"
+
+#. module: address_dataset_base
+#: model_terms:ir.ui.view,arch_db:address_dataset_base.view_partner_form_address_dataset_dependency
+msgid "Long"
+msgstr "लंबा"
+
+#. module: address_dataset_base
+#: model:ir.model.fields,field_description:address_dataset_base.field_address_dataset_settings__hide_coordinates
+msgid "Hide Lat/Long"
+msgstr "अक्षांश/लंबा छिपाएँ"
+
+#. module: address_dataset_base
+#: model:ir.model.fields,field_description:address_dataset_base.field_address_dataset_location__lat
+msgid "Latitude"
+msgstr "अक्षांश"
+
+#. module: address_dataset_base
+#: model:ir.model.fields,field_description:address_dataset_base.field_address_dataset_location__long
+msgid "Longitude"
+msgstr "देशान्तर"
+
+#. module: address_dataset_base
+#: model:ir.model.constraint,message:address_dataset_base.constraint_address_dataset_location_address_dataset_unique_key
+msgid "Postal address line must be unique."
+msgstr "डाक पता पंक्ति अद्वितीय होनी चाहिए."
+
+#. module: address_dataset_base
+#: model_terms:ir.ui.view,arch_db:address_dataset_base.view_partner_form_address_dataset_dependency
+#: model_terms:ir.ui.view,arch_db:address_dataset_base.view_partner_form_address_dataset_force_labels
+msgid "Province"
+msgstr "Province"
+
+#. module: address_dataset_base
+#: model_terms:ir.ui.view,arch_db:address_dataset_base.view_partner_form_address_dataset_dependency
+#: model_terms:ir.ui.view,arch_db:address_dataset_base.view_partner_form_address_dataset_force_labels
+msgid "District"
+msgstr "District"
+
+#. module: address_dataset_base
+#. odoo-python
+#: code:addons/address_dataset_base/models/address_location.py:0
+#: model:ir.actions.act_window,name:address_dataset_base.action_address_dataset_locations
+#: model:ir.actions.server,name:address_dataset_base.action_address_dataset_locations_server
+#: model:ir.ui.menu,name:address_dataset_base.menu_address_dataset_root
+#: model_terms:ir.ui.view,arch_db:address_dataset_base.view_address_dataset_location_list
+#: model_terms:ir.ui.view,arch_db:address_dataset_base.view_address_dataset_location_search
+msgid "Address Dataset"
+msgstr ""
+
+#. module: address_dataset_base
+#: model_terms:ir.ui.view,arch_db:address_dataset_base.view_address_dataset_settings_form
+msgid "Address Dataset Configuration"
+msgstr ""
+
+#. module: address_dataset_base
+#: model_terms:ir.ui.view,arch_db:address_dataset_base.view_address_dataset_location_form
+msgid "Address Dataset Entry"
+msgstr ""
+
+#. module: address_dataset_base
+#: model:ir.model,name:address_dataset_base.model_address_dataset_location
+msgid "Address Dataset Location"
+msgstr ""
+
+#. module: address_dataset_base
+#: model:ir.model,name:address_dataset_base.model_address_dataset_settings
+msgid "Address Dataset Settings"
+msgstr ""
+
+#. module: address_dataset_base
+#: model:ir.model.fields,field_description:address_dataset_base.field_address_dataset_location__city_id
+msgid "City"
+msgstr ""
+
+#. module: address_dataset_base
+#: model:ir.model,name:address_dataset_base.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: address_dataset_base
+#: model:ir.model.fields,field_description:address_dataset_base.field_address_dataset_location__country_id
+msgid "Country"
+msgstr ""
+
+#. module: address_dataset_base
+#: model:ir.model.fields,field_description:address_dataset_base.field_address_dataset_location__create_uid
+#: model:ir.model.fields,field_description:address_dataset_base.field_address_dataset_settings__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: address_dataset_base
+#: model:ir.model.fields,field_description:address_dataset_base.field_address_dataset_location__create_date
+#: model:ir.model.fields,field_description:address_dataset_base.field_address_dataset_settings__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: address_dataset_base
+#: model:ir.model.fields,field_description:address_dataset_base.field_address_dataset_location__display_name
+#: model:ir.model.fields,field_description:address_dataset_base.field_address_dataset_settings__display_name
+#: model:ir.model.fields,field_description:address_dataset_base.field_res_partner__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: address_dataset_base
+#: model:ir.model.fields,field_description:address_dataset_base.field_address_dataset_location__hide_coordinates
+#: model:ir.model.fields,field_description:address_dataset_base.field_res_partner__hide_coordinates
+#: model:ir.model.fields,field_description:address_dataset_base.field_res_users__hide_coordinates
+msgid "Hide Coordinates"
+msgstr ""
+
+#. module: address_dataset_base
+#: model:ir.model.fields,field_description:address_dataset_base.field_address_dataset_location__id
+#: model:ir.model.fields,field_description:address_dataset_base.field_address_dataset_settings__id
+#: model:ir.model.fields,field_description:address_dataset_base.field_res_partner__id
+msgid "ID"
+msgstr ""
+
+#. module: address_dataset_base
+#: model:ir.model.fields,field_description:address_dataset_base.field_address_dataset_location__write_uid
+#: model:ir.model.fields,field_description:address_dataset_base.field_address_dataset_settings__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: address_dataset_base
+#: model:ir.model.fields,field_description:address_dataset_base.field_address_dataset_location__write_date
+#: model:ir.model.fields,field_description:address_dataset_base.field_address_dataset_settings__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: address_dataset_base
+#: model:ir.ui.menu,name:address_dataset_base.menu_address_dataset_locations
+msgid "Locations"
+msgstr ""
+
+#. module: address_dataset_base
+#: model:ir.model.fields,field_description:address_dataset_base.field_address_dataset_location__name
+#: model:ir.model.fields,field_description:address_dataset_base.field_address_dataset_settings__name
+msgid "Name"
+msgstr ""
+
+#. module: address_dataset_base
+#: model:ir.model.fields,field_description:address_dataset_base.field_address_dataset_location__state_id
+msgid "State"
+msgstr ""
+
+#. module: address_dataset_base
+#: model:ir.model.fields,field_description:address_dataset_base.field_address_dataset_location__zip
+msgid "Zip"
+msgstr ""
+
+#~ msgid "Address Dataset Base"
+#~ msgstr "तुर्की पता डेटासेट"
+
+#~ msgid ""
+#~ "Core address dataset engine with hierarchy, partner integration and "
+#~ "coordinate visibility controls"
+#~ msgstr "पड़ोस और निर्देशांक के साथ तुर्की पता डेटासेट"
+
+#~ msgid "TR Postal Configuration"
+#~ msgstr "टीआर डाक विन्यास"
+
+#~ msgid "TR Postal Codes"
+#~ msgstr "टीआर पोस्टल कोड"
+
+#~ msgid "TR Postal Code"
+#~ msgstr "टीआर पोस्टल कोड"
+
+#~ msgid "TR Postal"
+#~ msgstr "टीआर डाक"
+
+#~ msgid "Postal Codes"
+#~ msgstr "डाक कोड"
