@@ -15,13 +15,12 @@ class AddressDatasetSettings(models.TransientModel):
             HIDE_COORDINATES_PARAM, "1" if value else "0"
         )
 
-    @api.model_create_multi
-    def create(self, vals_list):
-        records = super().create(vals_list)
-        for record, vals in zip(records, vals_list):
-            if "hide_coordinates" in vals:
-                record._set_hide_coordinates_param(vals["hide_coordinates"])
-        return records
+    @api.model
+    def create(self, vals):
+        record = super().create(vals)
+        if "hide_coordinates" in vals:
+            record._set_hide_coordinates_param(vals["hide_coordinates"])
+        return record
 
     def write(self, vals):
         result = super().write(vals)
