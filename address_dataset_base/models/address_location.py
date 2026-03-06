@@ -64,9 +64,9 @@ class AddressDatasetLocation(models.Model):
             "type": "ir.actions.act_window",
             "name": _("Address Dataset"),
             "res_model": "address.dataset.location",
-            "view_mode": "list,form",
+            "view_mode": "tree,form",
             "views": [
-                (self.env.ref("address_dataset_base.view_address_dataset_location_list").id, "list"),
+                (self.env.ref("address_dataset_base.view_address_dataset_location_list").id, "tree"),
                 (self.env.ref("address_dataset_base.view_address_dataset_location_form").id, "form"),
             ],
             "search_view_id": self.env.ref("address_dataset_base.view_address_dataset_location_search").id,

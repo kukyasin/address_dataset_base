@@ -54,7 +54,8 @@
                 <attribute name="invisible">0</attribute>
                 <attribute name="domain">[('country_id', '=', country_id), ('state_id', '=', state_id)]</attribute>
             </xpath>
-            <xpath expr="//div[hasclass('o_address_format')]/field[@name='city']" position="replace">
+            <xpath expr="//div[hasclass('o_address_format')]/field[@name='city']" position="attributes">
+                <attribute name="invisible">1</attribute>
             </xpath>
             <xpath expr="//field[@name='child_ids']//form//div[hasclass('o_address_format')]/field[@name='state_id']" position="attributes">
                 <attribute name="string">Province</attribute>
@@ -66,7 +67,8 @@
                 <attribute name="invisible">0</attribute>
                 <attribute name="domain">[('country_id', '=', country_id), ('state_id', '=', state_id)]</attribute>
             </xpath>
-            <xpath expr="//field[@name='child_ids']//form//div[hasclass('o_address_format')]/field[@name='city']" position="replace">
+            <xpath expr="//field[@name='child_ids']//form//div[hasclass('o_address_format')]/field[@name='city']" position="attributes">
+                <attribute name="invisible">1</attribute>
             </xpath>
         </field>
     </record>
